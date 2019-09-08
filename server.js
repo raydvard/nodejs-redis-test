@@ -7,7 +7,7 @@ app.use(express.json());       // to support JSON-encoded bodies
 app.use(express.urlencoded()); // to support URL-encoded bodies
  
 // create and connect redis client to local instance.
-const host = '175.144.229.24';
+const host = '60.52.126.248';
 const port = 6379;
 const client = redis.createClient(port, host)
 client.auth('mnxfordc');
@@ -40,6 +40,6 @@ app.post('/set', (request, response) => {
 });
  
 // start express server at 3000 port
-app.listen(3000, () => {
-    console.log('Server listening on port: ', 3000)
+app.listen(4200, () => {
+    console.log('Server listening on port: ', 4200)
 });
